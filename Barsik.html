@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> My Cat </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+
+  <style>
+    body {
+  font: 20px "Montserrat", sans-serif;
+  line-height: 1.8;
+}
+
+p {font-size: 16px;}
+    .bg-1 {
+          background-color: #bab7cf;
+          color: #000000;
+    }
+    .bg-2 {
+          background-color: #9289cf;
+          color: #000000;
+
+    }
+    .bg-3 {
+          background-color: #95b2e7;
+          color: #000000;
+
+    }
+    
+
+    .bg-4 {
+          background-color: #aa8bff;
+          color: #000000;
+
+    }
+    .bg-5 {
+          background-color: #8054fa;
+          color: #000000;
+
+    }
+    .bg-6 {
+          background-color: #000000;
+          color: #ffffff;
+
+    }
+
+   
+    .container-fluid {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid bg-1 text-center">
+    <h1> Who Is In This Image?</h1>
+      <img src="images/Barsik1.png" class="img-circle" width="400px" height="500px" alt="Barsik">
+    <h3> Its my cat. His name is Barsik!! </h3>
+  </div>
+
+  <div class="container-fluid bg-2 text-center">
+    <h3> His Personality </h3>
+     <p> Barsik is very kind and friendly. Even though he is an older cat, he is very playful. </p>
+  </div>
+
+  <div class="container-fluid bg-3 text-center">
+    <h3> What Are His Favourite Activities? </h3>
+     <p> Barsik likes to sleep, eat, and frolick out and about. </p>
+  </div>
+
+  <div class="container-fluid bg-4 text-center">
+    <div class= "row">
+    <h2> Some More Pictures</h2>
+  </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <p> He is hiding. Lord knows from what. </p>
+        <img src="images/Barsik2.png" width="200px" height="300px" alt="Image">
+      </div>
+
+      <div class="col-sm-3">
+        <p> Getting ready to fire lazer beams</p>
+        <img src="images/Barsik3.png"  width="200px" height="300px" alt="Image">
+      </div>
+
+      <div class="col-sm-3">
+        <p> He is planning something evil. </p>
+        <img src="images/Barsik4.png"  width="200px" height="300px" alt="Image">
+      </div>
+
+    <div class="col-sm-3">
+      <p> Hes trying to form a thought. </p>
+      <img src="images/Barsik5.png"  width="200px" height="300px" alt="Image">
+    </div>
+  </div>
+</div>
+  
+<div class="container-fluid bg-5 text-center">
+  <h2> Press the button to watch video of Barsik.</h2>
+      <button id="playButton" class="default">Play Video</button>
+      <div id="videoContainer" class="embed-responsive embed-responsive-16by9" style="display:none;">
+        <video id="videoPlayer" class="embed-responsive-item" controls>
+          <source src="images/Barsikvid.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+ <script>
+  $(document).ready(function() {
+    $('#playButton').click(function() {
+      var videoContainer = $('#videoContainer');
+      if (videoContainer.is(':visible')) {
+        videoContainer.hide();
+        // Reset the size of the video player
+        videoContainer.css({'padding-bottom': '56.25%', 'height': '0'});
+      } else {
+        videoContainer.show();
+        // Set the size of the video player
+        videoContainer.css({'padding-bottom': '40%', 'height': '0'});
+        // Add the video player
+        videoContainer.html('<video id="videoPlayer" class="embed-responsive-item" controls>' +
+          '<source src="images/Barsikvid.mov" type="video/mp4">' +
+          'Your browser does not support the video tag.' +
+          '</video>');
+        // Play the video
+        $('#videoPlayer')[0].play();
+      }
+    });
+  });
+</script>
+<footer> 
+  <div class="container-fluid bg-6 text-center">
+  <bold> Meow Meow Meow (the end) </bold>
+</div>
+</footer>
+
+
+
+
+
+</body>
+</html>
